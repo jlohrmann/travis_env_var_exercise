@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node .
+  - docker build -t simple_node_travis --build_arg JUNK=${JUNK} .
   - docker tag simple-node jlohrmann/simple_node_travis:latest
 
 after_success:
